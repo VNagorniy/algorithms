@@ -24,6 +24,20 @@ function binarySearch(array, item) {
   return position;
 }
 
-console.log(binarySearch(array, 7));
+function recursiveBinarySearch(array, item, start, end) {
+  let middle = Math.floor((start + end) / 2);
+  count += 1;
+  if (item === array[middle]) {
+    return middle;
+  }
+  if (item < array[middle]) {
+    return recursiveBinarySearch(array, item, start, middle - 1);
+  } else {
+    return recursiveBinarySearch(array, item, middle + 1, end);
+  }
+}
+
+console.log(binarySearch(array, 6));
+console.log(recursiveBinarySearch(array, 6, 0, array.length));
 console.log(count);
 // Сложность O(log2n)
