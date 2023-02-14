@@ -13,3 +13,4 @@ function linearSearch(array, item) {
 
 console.log(linearSearch(array, 11));
 console.log('count = ', count);
+// Сложность O(n)
